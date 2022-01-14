@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#menu {
+    width: 100vw;
+    height: 100px;
+    background-color: yellow;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#menu ul {
+    display: flex;
+}
+
+#menu ul li ul {
+    display: block;
+    position: absolute;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#menu ul li {
+    width: 120px;
+    height: auto;
+    background-color: orange;
+    margin-right: 20px;
+    padding-left: 10px;
+    font-weight: 800;
+}
+
+#menu ul li ul li {
+    display: none;
+    margin-left: -10px;
+    padding-left: 10px;
+    background-color: yellow;
+}
+
+#menu ul li:hover {
+    cursor: pointer;
+}
+
+#menu ul li:hover ul li {
+    display: block;
+}
+
+#menu ul li ul li:hover {
+    background-color: orange;
+}
+
+section {
+    width: 800px;
+    height: auto;
+    margin: 10px auto;
+    padding: 20px;
+    max-width: 100%;
+}
+
+#listas {
+    background: chocolate;
+    color: white;
+}
+
+#tabelas {
+    background-color: cyan;
+}
+
+#formularios {
+    background-color: blueviolet;
+    color: white;
+    font-size: 17px;
+}
+
+#tabelas table {
+    width: 100%;
+}
+
+#tabelas table th {
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 3px solid #a0a0af;
+    padding: 15px 17px;
+}
+
+input, select {
+    margin: 10px;
+    font-size: 17px;
+}
+
+label {
+    cursor: pointer;
+}
+
+#textos p{
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 400;
+    direction: ltr;
+    letter-spacing: 0px;
+    word-spacing: 30px;
+    font-family: serif;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 300px;
+    text-shadow: 2px 2px 1px blueviolet;
+    text-transform: capitalize;
+}
+
+#flex .flex-container {
+    background-color: blueviolet;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    text-align: center;
+}
+
+#flex .flex-item {
+    width:220px;
+    height:200px;
+    background-color: chartreuse;
+}
+
+#flex .flex-item:nth-child(2) {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+#flex .flex-item .flex-item2{
+    font-size: 8px;
+    width:50px;
+    height:100px;
+
+    background-color: coral;
+}
+
+#grid .grade {
+    display: grid;
+   /* grid-template-columns: 50% 50%;*/
+   /* grid-template-columns: 200px 1fr; */
+   grid-template-columns: repeat(auto-fill,minmax(150px, 1fr));
+   gap:30px 20px;
+    
+}
+#grid .grade div{
+    min-height: 100px;
+    background-color: coral;
+}
+#grid .grade div:nth-child(5){
+ grid-row: span 2;
+ grid-column: span 2;
+
+}

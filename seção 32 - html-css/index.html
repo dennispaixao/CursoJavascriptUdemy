@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <nav id="menu">
+            <ul>
+                <li>
+                    HTML
+                    <ul>
+                        <li>
+                            <a href="#listas">Listas</a>
+                        </li>
+                        <li>
+                            <a href="#tabelas">Tabelas</a>
+                        </li>
+                        <li>
+                            <a href="#formularios">Formularios</a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li>
+                    CSS
+                    <ul>
+                        <li>
+                            <a href="#textos">Texto</a>
+                        </li>
+                        <li>
+                            <a href="#flex">Flex</a>
+                        </li>
+                        <li>
+                            <a href="#grid">Grid</a>
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="listas">
+        <h1>Lista</h1>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li>
+        </ul>
+
+
+
+    </section>
+
+    <section id="tabelas">
+        <h1>Tabela</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Coluna 1</th>
+                <th>Coluna 2</th>
+                <th>Coluna 3</th>
+            </tr>
+            </thead>
+            <!-- ATENÇÃO ABAIXO -->
+            <tbody>
+            <tr>
+                <td>Coluna 1</td>
+                <td colspan=2>Coluna 2</td> <!-- Se essa coluna ocupa 2, a próxima deve sumir -->
+                <!-- <td>Coluna 3</td> ESSA COLUNA PERDEU O LUGAR -->
+            </tr>
+
+            <tr>
+                <td>Coluna 1</td>
+                <td>Coluna 2</td>
+                <td>Coluna 3</td>
+            </tr>
+
+            <tr>
+                <td>Coluna 1</td>
+                <td>Coluna 2</td>
+                <td>Coluna 3</td>
+            </tr>
+            <!-- ATENÇÃO ABAIXO -->
+            <tr>
+                <td>Coluna 1</td>
+                <td rowspan=2>Coluna 2</td> <!-- Se essa linha ocupa 2, a próxima deve sumir -->
+                <td>Coluna 3</td>
+            </tr>
+
+            <tr>
+                <td>Coluna 1</td>
+                <td>Coluna 2</td>
+                <!--<td>Coluna 3</td> ESSA LINHA SUMIU PORQUE SEU LUGAR AGORA ESTÁ OCUPADO -->
+            </tr>
+            </tbody>
+        </table>
+
+
+
+    </section>
+    <section id="formularios">
+        <h1>Formulário</h1>
+        <form action="#" method="GET" target="_blank" autocomplete="off">
+            <fieldset>
+                <legend>Campo de texto</legend>
+                <p>
+                    <label for="nome" >Nome: </label>
+                    <input type="text" name="nome" id="nome">
+
+
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>checkbox</legend>
+                <p>
+                    <label for="c1" >Dev: </label>
+                    <input type="checkbox" name="c1" id="c1">
+
+                </p>
+                <p>
+                    <label for="c2" >Dev2: </label>
+                    <input type="checkbox" name="c2" id="c2">
+
+                </p>
+                <p>
+                    <label for="c3" >Dev3: </label>
+                    <input type="checkbox" name="c3" id="c3">
+
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>radio</legend>
+                <p>
+                    <label for="r1" >Dev: </label>
+                    <input type="radio" name="r1" value='r1' id="r1" checked>
+
+                </p>
+                <p>
+                    <label for="r2" >Dev2: </label>
+                    <input type="radio" name="r1" id="r2" value='r2'>
+
+                </p>
+                <p>
+                    <label for="r3" >Dev3: </label>
+                    <input type="radio" name="r1" id="r3" value='r3' >
+
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Date</legend>
+                <p>
+                    <label for="Data" >Data: </label>
+                    <input type="date" name="Data" id="Data" value='2020-04-20' >
+
+                </p>
+               
+            </fieldset>
+
+            <fieldset>
+                <legend>Time</legend>
+                <p>
+                    <label for="Time" >Time: </label>
+                    <input type="time" id="Time" name="Time" >
+
+                </p>
+               
+            </fieldset>
+
+
+            <fieldset>
+                <legend>DateTime</legend>
+                <p>
+                    <label for="DateTime" >Data: </label>
+                    <input type="datetime-local" id="DateTime" name="DateTime" value='2020-04-20T20:00' >
+
+                </p>
+               
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Email</legend>
+                <p>
+                    <label for="Email" >Email: </label>
+                    <input type="email" id="Email" name="Email" >
+
+                </p>
+               
+            </fieldset>
+
+            <fieldset>
+                <legend>Cor</legend>
+                <p>
+                    <label for="cor" >Cor: </label>
+                    <input type="color" id="cor" name="cor" >
+
+                </p>
+               
+            </fieldset>
+
+            
+            <fieldset>
+                <legend>File</legend>
+                <p>
+                    <label for="File" >File: </label>
+                    <input type="file" name="File" id="File" accept=".png,image/*" multiple>
+
+                </p>
+               
+            </fieldset>
+
+            <fieldset>
+                <legend>Numero</legend>
+                <p>
+                    <label for="Numero" >Numero: </label>
+                    <input type="number" id="Numero" name="Numero" min="10" max="50" step="5" >
+
+                </p>
+               
+            </fieldset>
+
+            <fieldset>
+                <legend>Password</legend>
+                <p>
+                    <label for="password" >Password: </label>
+                    <input type="password" id="password" name="Password" >
+
+                </p>
+               
+            </fieldset>
+
+            <fieldset>
+                <legend>range</legend>
+                <p>
+                    <label for="range" >Range: </label>
+                    <input type="range" id="range" min="10" max="100" step="1" name="range" >
+
+                </p>
+               
+            </fieldset>
+
+            <fieldset>
+                <legend>url</legend>
+                <p>
+                    <label for="url" >Url: </label>
+                    <input type="url" id="url" name="url" >
+
+                </p>
+               
+            </fieldset>
+
+            <fieldset>
+                <legend>Search</legend>
+                <p>
+                    <label for="Search" >Search: </label>
+                    <input type="search"  id="Search" name="Search" >
+
+                </p>
+               
+            </fieldset>
+
+            <fieldset>
+                <legend>Select</legend>
+                <p>
+                    <label for="select" >Select: </label>
+                    <select name="select" id="select">
+                        <optgroup label="grupo1">
+                        <option value="v1" label="valor1"></option>
+                        <option value="v2" label="valor2"></option>
+                        </optgroup>
+                        <optgroup label="grupo2">
+                            <option value="v3" label="valor3"></option>
+                            
+                        </optgroup>
+                    </select>
+
+                </p>
+               
+            </fieldset>
+
+
+            <fieldset>
+                <legend>TextArea</legend>
+                <p>
+                    <label for="textArea" >textArea: </label>
+                    <textarea name="textArea" id="textArea"  cols="30" rows="10"></textarea>
+                </p>
+               
+            </fieldset>
+            <p>
+                <input type="submit">
+                <input type="reset">
+
+
+            </p>
+        </form>   
+    </section>
+    <section id="textos">
+        <h1>tex</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum architecto optio quam illum magni ipsam, nulla, dolor provident at unde possimus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quod voluptatem officia sunt iste, illum excepturi placeat ducimus corporis minima nihil, molestiae hic debitis! Corporis veniam sint sit est animi? lor ab facilis dolore iusto recusandae perferendis temporibus, soluta nihil.<p>
+    </section>
+    <section id="flex">
+        <h1>Flex</h1>
+
+        <div class="flex-container">
+            <div class="flex-item">um</div>
+            <div class="flex-item">dois
+                
+                <div class="flex-item2">um</div>
+                <div class="flex-item2">dois</div>
+                <div class="flex-item2">três</div>
+                <div class="flex-item2">quatro</div>
+                <div class="flex-item2">cinco</div>
+                <div class="flex-item2">seis</div>
+
+
+
+            </div>
+            <div class="flex-item">tres</div>
+            <div class="flex-item">quatro</div>
+            <div class="flex-item">cinco</div>
+        
+        </div>   
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <section id="grid">
+        <h1>Grid</h1>
+        <div class="grade">
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+            <div>um</div>    
+        </div>
+
+    </section>
+</body>
+
+</html>
